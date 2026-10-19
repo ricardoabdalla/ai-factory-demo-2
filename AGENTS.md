@@ -6,6 +6,8 @@
 |---|---|---|---|
 | Build | `npm run build` | verify | vite build, gera dist/ |
 | Test | `npm test` | verify | build + vitest run sobre dist/index.html |
+| Add devDependencies | `npm install --save-dev vite typescript vitest linkedom lucide-static @types/node` | install | TASK-001: as seis devDependencies da spec; gera package-lock.json |
+| Install | `npm install` | install | instala node_modules a partir de package.json / package-lock.json |
 
 Do not invent commands beyond this registry.
 
