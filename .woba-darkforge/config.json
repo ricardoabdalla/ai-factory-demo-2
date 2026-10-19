@@ -1,7 +1,7 @@
 {
   "engine_version": "v0.2.0",
   "slug": "ai-factory-demo-2",
-  "remote": "",
+  "remote": "git@github.com:ricardoabdalla/ai-factory-demo-2.git",
   "tier": "standard",
   "stack": {
     "contract_cmd": "npm test",
