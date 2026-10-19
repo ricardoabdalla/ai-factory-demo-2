@@ -1,0 +1,58 @@
+{
+  "engine_version": "v0.2.0",
+  "slug": "ai-factory-demo-2",
+  "remote": "",
+  "tier": "standard",
+  "stack": {
+    "contract_cmd": "npm test",
+    "build_cmd": "npm run build",
+    "dist_dir": "dist"
+  },
+  "paths": {
+    "specs": "specs",
+    "tasks": "tasks",
+    "adrs": "docs/adrs",
+    "docs": [
+      "docs"
+    ]
+  },
+  "convergence": {
+    "satisfaction_target": 0.9,
+    "streak": 2,
+    "max_iterations": 5,
+    "max_adversarial_rounds": 3
+  },
+  "laws": {
+    "modules": [
+      "judgment-boundaries",
+      "approval-records",
+      "commit-discipline",
+      "re-homing"
+    ],
+    "params": {}
+  },
+  "agents": {
+    "builder": {
+      "host": "claude",
+      "model": "claude-opus-5-5",
+      "reasoning": "high"
+    },
+    "critic": {
+      "host": "codex",
+      "model": "gpt-6.1-sol",
+      "reasoning": "high"
+    },
+    "judge": {
+      "host": "claude",
+      "model": "claude-sonnet-5-5",
+      "reasoning": "medium"
+    }
+  },
+  "exam": {
+    "enabled": false,
+    "reason": "disabled by default in the standard tier"
+  },
+  "task_critic": {
+    "enabled": true
+  }
+}
