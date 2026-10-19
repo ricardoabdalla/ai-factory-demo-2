@@ -1,0 +1,69 @@
+/* Tokens do design system da Woba: Opção 2 de
+   docs/Woba Design System - ui reference.md, mais os Tokens próprios da spec. */
+:root {
+  /* Fonts */
+  --woba-font-display: "Noticia Text", Georgia, serif;
+  --woba-font-heading: "Host Grotesk", system-ui, sans-serif;
+  --woba-font-base: "Manrope", system-ui, sans-serif;
+
+  /* Backgrounds and surfaces */
+  --woba-color-background-default: #FFFFFF;
+  --woba-color-background-subtle: #FAFAFA;
+  --woba-color-surface-default: #FFFFFF;
+  --woba-color-surface-subtle: #F2F2F2;
+  --woba-color-surface-subtle-on-subtle: #E5E5E5;
+  --woba-color-surface-inverse: #000000;
+  --woba-color-surface-accent-primary: #F9E10D;
+  --woba-color-surface-accent-secondary: #F2EDDE;
+  --woba-color-surface-accent-secondary-subtle: #F6F2E7;
+  --woba-color-surface-common-hover: rgba(0,0,0,0.08);
+  --woba-color-surface-common-pressed: rgba(0,0,0,0.16);
+  --woba-color-surface-common-disabled: #F2F2F2;
+  --woba-color-surface-common-overlay: rgba(0,0,0,0.48);
+
+  /* Content */
+  --woba-color-content-default: #000000;
+  --woba-color-content-subtle: rgba(0,0,0,0.64);
+  --woba-color-content-common-disabled: rgba(0,0,0,0.32);
+  --woba-color-content-inverse: #FFFFFF;
+  --woba-color-content-accent-primary: #272302;
+  --woba-color-content-visited: #8F00D6;
+
+  /* Strokes */
+  --woba-color-stroke-default: rgba(0,0,0,0.08);
+  --woba-color-stroke-common-selected: #000000;
+
+  /* Feedback: strong / subtle */
+  --woba-color-surface-feedback-info: #006BB2;     --woba-color-surface-feedback-info-subtle: #E5F5FF;
+  --woba-color-surface-feedback-success: #207C0E;  --woba-color-surface-feedback-success-subtle: #EFFDED;
+  --woba-color-surface-feedback-warning: #A84600;  --woba-color-surface-feedback-warning-subtle: #FFF0E5;
+  --woba-color-surface-feedback-critical: #CC1800; --woba-color-surface-feedback-critical-subtle: #FFEDEB;
+  --woba-color-content-feedback-critical: #991200;
+
+  /* Spacing */
+  --woba-spacing-gap-xsmall: 4px;  --woba-spacing-gap-small: 8px;   --woba-spacing-gap-medium: 12px;
+  --woba-spacing-gap-large: 16px;  --woba-spacing-gap-xlarge: 20px; --woba-spacing-gap-jumbo: 32px;
+  --woba-spacing-padding-nano: 4px;   --woba-spacing-padding-2xsmall: 8px; --woba-spacing-padding-xsmall: 12px;
+  --woba-spacing-padding-small: 16px; --woba-spacing-padding-medium: 20px; --woba-spacing-padding-large: 24px;
+  --woba-spacing-padding-xlarge: 32px; --woba-spacing-padding-2xlarge: 48px; --woba-spacing-padding-jumbo: 64px;
+
+  /* Radius and stroke */
+  --woba-border-radius-nano: 4px;   --woba-border-radius-xsmall: 8px; --woba-border-radius-small: 12px;
+  --woba-border-radius-medium: 16px; --woba-border-radius-large: 24px; --woba-border-radius-jumbo: 32px;
+  --woba-border-radius-pill: 999px;
+  --woba-stroke-small: 1px;
+
+  /* Elevation */
+  --woba-shadow-focus-ring: 0 0 0 1px #FFFFFF, 0 0 0 3px #000000;
+  --woba-shadow-hover: 0 1px 1px 0 rgba(0,0,0,0.24), 0 0 1px 0 rgba(0,0,0,0.32);
+  --woba-shadow-overlay: 0 20px 24px -4px rgba(0,0,0,0.08), 0 8px 8px -4px rgba(0,0,0,0.08);
+  --woba-shadow-sheet: 0 12px 64px 0 rgba(0,0,0,0.08);
+
+  /* Motion */
+  --woba-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --woba-duration-fast: 120ms; --woba-duration-base: 200ms; --woba-duration-slow: 320ms;
+
+  /* Tokens próprios da spec */
+  --woba-color-surface-glass: rgba(255,255,255,0.64);
+  --woba-color-content-feedback-neutral: #4A3E1C;
+}

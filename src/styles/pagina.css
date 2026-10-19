@@ -1,0 +1,170 @@
+/* Estilos da página. Toda cor vem de var(--woba-*), declarada em tokens.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Layout: 4 colunas e 16px abaixo de 600px, 8 colunas e 32px de 600px a
+   1023px, 12 colunas a partir de 1024px com conteúdo de até 1216px. */
+body {
+  --layout-colunas: 4;
+  --layout-gutter: 16px;
+  --layout-margem: 16px;
+
+  margin: 0;
+  background-color: var(--woba-color-background-default);
+  color: var(--woba-color-content-default);
+  font: 500 16px/24px var(--woba-font-base);
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 600px) {
+  body {
+    --layout-colunas: 8;
+    --layout-gutter: 32px;
+    --layout-margem: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    --layout-colunas: 12;
+    --layout-margem: max(32px, calc((100% - 1216px) / 2));
+  }
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--woba-shadow-focus-ring);
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--woba-spacing-gap-large);
+  min-height: 64px;
+  padding: var(--woba-spacing-padding-xsmall) var(--layout-margem);
+  border-bottom: var(--woba-stroke-small) solid var(--woba-color-stroke-default);
+}
+
+.marca {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--woba-border-radius-xsmall);
+  background-color: var(--woba-color-surface-accent-primary);
+  color: var(--woba-color-content-default);
+}
+
+.marca svg {
+  display: block;
+  width: 24px;
+  height: auto;
+}
+
+.link-artigo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: var(--woba-spacing-padding-2xsmall) var(--woba-spacing-padding-small);
+  border: var(--woba-stroke-small) solid var(--woba-color-stroke-default);
+  border-radius: var(--woba-border-radius-pill);
+  color: var(--woba-color-content-default);
+  font: 700 14px/14px var(--woba-font-base);
+  text-decoration: none;
+}
+
+.link-artigo:hover {
+  background-color: var(--woba-color-surface-common-hover);
+}
+
+/* Seções */
+
+.secao {
+  display: grid;
+  grid-template-columns: repeat(var(--layout-colunas), minmax(0, 1fr));
+  column-gap: var(--layout-gutter);
+  padding: var(--woba-spacing-padding-2xlarge) var(--layout-margem);
+}
+
+.secao > * {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.overline {
+  color: var(--woba-color-content-subtle);
+  font: 600 12px/12px var(--woba-font-base);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: var(--woba-spacing-gap-large);
+  font-family: var(--woba-font-display);
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.paragrafo {
+  font: 500 16px/24px var(--woba-font-base);
+}
+
+.secao > h1 + .paragrafo {
+  margin-top: var(--woba-spacing-padding-large);
+}
+
+.secao > .paragrafo + .paragrafo {
+  margin-top: var(--woba-spacing-gap-large);
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .secao--inicio {
+    padding-block: var(--woba-spacing-padding-jumbo);
+  }
+
+  .secao--inicio > h1,
+  .secao--inicio > .paragrafo {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .secao--inicio > h1,
+  .secao--inicio > .paragrafo {
+    grid-column: 1 / span 8;
+  }
+}
+
+/* Rodapé */
+
+.rodape {
+  padding: var(--woba-spacing-padding-xlarge) var(--layout-margem);
+  border-top: var(--woba-stroke-small) solid var(--woba-color-stroke-default);
+}
+
+.credito {
+  margin: 0;
+  color: var(--woba-color-content-subtle);
+  font: 500 14px/20px var(--woba-font-base);
+}
